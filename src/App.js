@@ -1,4 +1,8 @@
 import React from 'react';
+
+import { connect } from 'react-redux' // utility to "connect"
+import * as actions from './actionCreators/actionCreators'
+
 import './App.css';
 
 function App() {
@@ -9,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(st => st, actions)(App);
