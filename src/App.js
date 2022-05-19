@@ -5,10 +5,14 @@ import * as actions from './actionCreators/actionCreators'
 
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      Async Redux Project
+      <h1>All About Cats App</h1>
+      <div>
+      <span>{props.count}</span>
+      <button onClick={evt => props.increment(5)}>inc</button>
+      </div>
     </div>
   );
 }
